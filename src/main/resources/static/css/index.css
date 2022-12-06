@@ -1,0 +1,185 @@
+body {
+    background-color: #202020;
+    font-family: sans-serif;
+}
+
+.menu{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: #202020;
+    color: white;
+} 
+
+.nav {
+    display: flex;
+    margin: 15px;
+    width: 250px;
+    height: auto;
+    color: white;
+}
+
+.nav button {
+    display: flex;
+    margin: 10px;
+    width: auto;
+    height: auto;
+    text-transform: uppercase;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    border: none;
+    background-color: #202020;
+    
+}
+
+.title {
+    display: flex;
+    margin-left: calc(50% - 375px);
+    width: 150px;
+    height: auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.title h1 {
+    color: #EE9C7F
+}
+
+.picture {
+    margin-top: 30px;
+    height: 400px; 
+    width: 100%;
+}
+
+.picture img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* --------- sub menu ----------- */
+
+.sub-menu {
+    margin-top: 30px;
+    display: flex;
+    width: 70%;
+    height: 200px;
+    margin-left: 15%;
+}
+
+.sub-menu .icon {
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    background-color: #101010;
+}
+
+.sub-menu .icon-cocktail{
+    height: 200px;
+    width: 150px;
+    margin: auto;
+    background-image: url('../icon/cocktail.png');
+    background-size: 150px 150px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    background-repeat: no-repeat;
+    line-height: 350px;
+}
+
+.sub-menu .icon-wine{
+    height: 200px;
+    width: 150px;
+    margin: auto;
+    background-image: url('../icon/wine.png');
+    background-size: 150px 150px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    background-repeat: no-repeat;
+    line-height: 350px;
+}
+
+.sub-menu .icon-digestif{
+    height: 200px;
+    width: 150px;
+    margin: auto;
+    background-image: url('../icon/digestif.png');
+    background-size: 150px 150px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    background-repeat: no-repeat;
+    line-height: 350px;
+}
+
+.sub-menu .icon-pizza{
+    height: 200px;
+    width: 150px;
+    margin: auto;
+    background-image: url('../icon/pizza.png');
+    background-size: 150px 150px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    background-repeat: no-repeat;
+    line-height: 350px;
+}
+
+/* ---------- sub menu clickable ---------- */
+
+.sub-menu .icon-cocktail:hover{
+    height: 200px;
+    width: 150px;
+    margin: auto;
+    background-image: url('../icon/cocktailCliquable.png');
+    background-size: 150px 150px;
+    text-align: center;
+    color: #EE9C7F;
+    font-size: 25px;
+    background-repeat: no-repeat;
+    line-height: 350px;
+}
+
+.sub-menu .icon-wine:hover{
+    height: 200px;
+    width: 150px;
+    margin: auto;
+    background-image: url('../icon/wineCliquable.png');
+    background-size: 150px 150px;
+    text-align: center;
+    color: #EE9C7F;
+    font-size: 25px;
+    background-repeat: no-repeat;
+    line-height: 350px;
+}
+
+.sub-menu .icon-digestif:hover{
+    height: 200px;
+    width: 150px;
+    margin: auto;
+    background-image: url('../icon/digestifCliquable.png');
+    background-size: 150px 150px;
+    text-align: center;
+    color: #EE9C7F;
+    font-size: 25px;
+    background-repeat: no-repeat;
+    line-height: 350px;
+}
+
+.sub-menu .icon-pizza:hover{
+    height: 200px;
+    width: 150px;
+    margin: auto;
+    background-image: url('../icon/pizzaCliquable.png');
+    background-size: 150px 150px;
+    text-align: center;
+    color: #EE9C7F;
+    font-size: 25px;
+    background-repeat: no-repeat;
+    line-height: 350px;
+}
