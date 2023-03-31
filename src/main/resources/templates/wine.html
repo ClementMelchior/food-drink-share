@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Jus de bagarre</title>
+        <script th:src="@{/javascript/jquery-2.1.4.js}"></script>
+        <script th:src="@{/javascript/wine.js}"></script>
+        <link th:href="@{/css/computer/wine.css}" rel="stylesheet"/>
+        <link th:href="@{/css/tablet/wine.css}" rel="stylesheet"/>
+        <link th:href="@{/css/mobile/wine.css}" rel="stylesheet"/>
+	</head>
+
+	<body>
+		<header>
+            <div class="menu">
+                <a th:href="@{/}" class="title">
+                    <h1>
+                        La Bagarre
+                    </h1>
+                </a>
+            </div>
+		</header>
+
+        <div class="picture">
+            <div class="sub-title">
+                <h2>Les boissons nobles</h2>
+                <p>Ici, on redeviens serieux, chaque met se doit d'être accompagné par le plus fins des brevages</p>
+                <div class="add">
+                    <a th:href="@{/vin/ajouter}">
+                        + Ajouter de la vinasse
+                    </a>
+                </div>
+            </div>
+            <img th:src="@{/img/bar.jpg}">
+        </div>
+
+        <div class="sub-menu">
+            <a th:href="@{cocktails}">
+                <div class="icon-cocktail">
+                    Bagarre
+                </div>
+            </a>
+            <a th:href="@{vins}">
+                <div class="icon-wine">
+                    Vins
+                </div>
+            </a>
+            <a th:href="@{digestifs}">
+                <div class="icon-digestif">
+                    Pouce-pouce
+                </div>
+            </a>
+            <a th:href="@{grailles}">
+                <div class="icon-pizza">
+                    Graille
+                </div>
+            </a>
+        </div>
+
+        <div class="category">
+            <h1>Rouge</h1>
+        </div>
+
+        <div class="result">
+            <tr th:each="rouge: ${rouges}">
+                <div class="product">
+                    <div class="product-picture">
+                        <img th:src="@{${'/img/wine/' + rouge.picture}}" th:onerror="this.onerror=null; this.src='/img/wine/rouge.jpeg'">
+                    </div>
+                    <div class="product-information">
+                        <h2 class="product-information-title" th:text="${rouge.name}">
+                        </h2>
+                        <p class="product-information-description" th:text="${rouge.description}">
+                        </p>
+                        <button th:id="'button-' + ${rouge.wineId}" class="instructions-button" th:attr="onclick=|displayDetail(this, '${rouge.wineId}')|">
+                            +
+                        </button>
+                    </div>
+                    <div class="product-grade" th:text="${rouge.grade}+ '/5'">
+                    </div>
+                </div>
+
+                <div th:id="'wine-' + ${rouge.wineId}" class="recipe">
+
+                    <h2>
+                        Caractéristiques
+                    </h2>
+
+                    <div class="caracteristique">
+                        <div class="caracteristique-zone">
+                            <div class="line">
+                                <h3>Puissance</h3>
+                                <img th:src="@{${'/img/wine/caracteristique/' + rouge.puissance + '.PNG'}}">
+                            </div>
+                            <div class="line">
+                                <h3>Tanicité</h3>
+                                <img th:src="@{${'/img/wine/caracteristique/' + rouge.tanicite + '.PNG'}}">
+                            </div>
+                        </div>
+
+                        <div class="caracteristique-zone">
+                            <div class="line">
+                                <h3>Sucrosité</h3>
+                                <img th:src="@{${'/img/wine/caracteristique/' + rouge.sucrosite + '.PNG'}}">
+                            </div>
+                            <div class="line">
+                                <h3>Fruité</h3>
+                                <img th:src="@{${'/img/wine/caracteristique/' + rouge.fruite + '.PNG'}}">
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>
+                        Commentaires
+                    </h2>
+
+                    <div class="comment-zone">
+                        <div th:each="comment:${rouge.comments}" class="sub-comment-zone">
+                            <div th:if="${user!=comment.name}" class="comment">
+                                <h3 th:text="${comment.name}"></h3>
+                                <p th:text="${comment.text}"></p>
+                            </div>
+
+                            <div th:if="${user==comment.name}" class="my-comment">
+                                <h3 th:text="${comment.name}"></h3>
+                                <p th:text="${comment.text}"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment-text">
+                        <textarea th:id="'text-' + ${rouge.wineId}"></textarea>
+                    </div>
+
+                    <button th:attr="onclick=|sendMessage('${user}', '${rouge.wineId}')|" class="send-button">
+                        Envoyer
+                    </button>
+                    <button class="instructions-button" th:attr="onclick=|undisplayDetail(this, '${rouge.wineId}')|">
+                        X
+                    </button>
+                </div>
+            </tr>
+        </div>
+
+        <div class="category">
+            <h1>Blanc</h1>
+        </div>
+
+        <div class="result">
+            <tr th:each="blanc: ${blancs}">
+                <div class="product">
+                    <div class="product-picture">
+                        <img th:src="@{${'/img/wine/' + blanc.picture}}" th:onerror="this.onerror=null; this.src='/img/wine/blanc.jpeg'">
+                    </div>
+                    <div class="product-information">
+                        <h2 class="product-information-title" th:text="${blanc.name}">
+                        </h2>
+                        <p class="product-information-description" th:text="${blanc.description}">
+                        </p>
+                        <button th:id="'button-' + ${blanc.wineId}" class="instructions-button" th:attr="onclick=|displayDetail(this, '${blanc.wineId}')|">
+                            +
+                        </button>
+                    </div>
+                    <div class="product-grade" th:text="${blanc.grade}+ '/5'">
+                    </div>
+                </div>
+
+                <div th:id="'wine-' + ${blanc.wineId}" class="recipe">
+
+                    <h2>
+                        Commentaires
+                    </h2>
+
+                    <div class="comment-zone">
+                        <div th:each="comment:${blanc.comments}" class="sub-comment-zone">
+                            <div th:if="${user!=comment.name}" class="comment">
+                                <h3 th:text="${comment.name}"></h3>
+                                <p th:text="${comment.text}"></p>
+                            </div>
+
+                            <div th:if="${user==comment.name}" class="my-comment">
+                                <h3 th:text="${comment.name}"></h3>
+                                <p th:text="${comment.text}"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment-text">
+                        <textarea th:id="'text-' + ${blanc.wineId}"></textarea>
+                    </div>
+
+                    <button th:attr="onclick=|sendMessage('${user}', '${blanc.wineId}')|" class="send-button">
+                        Envoyer
+                    </button>
+
+                    <button class="instructions-button" th:attr="onclick=|undisplayDetail(this, '${blanc.wineId}')|">
+                        X
+                    </button>
+                </div>
+            </tr>
+        </div>
+
+        <div class="category">
+            <h1>Rosé</h1>
+        </div>
+
+        <div class="result">
+            <tr th:each="rose: ${roses}">
+                <div class="product">
+                    <div class="product-picture">
+                        <img th:src="@{${'/img/wine/' + rose.picture}}" th:onerror="this.onerror=null; this.src='/img/wine/rose.jpeg'">
+                    </div>
+                    <div class="product-information">
+                        <h2 class="product-information-title" th:text="${rose.name}">
+                        </h2>
+                        <p class="product-information-description" th:text="${rose.description}">
+                        </p>
+                        <button th:id="'button-' + ${rose.wineId}" class="instructions-button" th:attr="onclick=|displayDetail(this, '${rose.wineId}')|">
+                            +
+                        </button>
+                    </div>
+                    <div class="product-grade" th:text="${rose.grade}+ '/5'">
+                    </div>
+                </div>
+
+                <div th:id="'wine-' + ${rose.wineId}" class="recipe">
+
+                    <h2>
+                        Commentaires
+                    </h2>
+
+                    <div class="comment-zone">
+                        <div th:each="comment:${rose.comments}" class="sub-comment-zone">
+                            <div th:if="${user!=comment.name}" class="comment">
+                                <h3 th:text="${comment.name}"></h3>
+                                <p th:text="${comment.text}"></p>
+                            </div>
+
+                            <div th:if="${user==comment.name}" class="my-comment">
+                                <h3 th:text="${comment.name}"></h3>
+                                <p th:text="${comment.text}"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment-text">
+                        <textarea th:id="'text-' + ${rose.wineId}"></textarea>
+                    </div>
+
+                    <button th:attr="onclick=|sendMessage('${user}', '${rose.wineId}')|" class="send-button">
+                        Envoyer
+                    </button>
+                    <button class="instructions-button" th:attr="onclick=|undisplayDetail(this, '${rose.wineId}')|">
+                        X
+                    </button>
+                </div>
+            </tr>
+        </div>
+
+        <div class="footer">
+            
+        </div>
+
+        <script type="text/javascript">
+			$(".recipe").fadeOut(0);
+		</script>
+	</body>
+</html>

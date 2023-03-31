@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Jus de bagarre</title>
+        <script th:src="@{/javascript/jquery-2.1.4.js}"></script>
+        <script th:src="@{/javascript/recipe.js}"></script>
+        <link th:href="@{/css/computer/new_wine.css}" rel="stylesheet"/>
+	</head>
+
+	<body>
+		<header>
+            <div class="menu">
+                <a th:href="@{/}" class="title">
+                    <h1>
+                        La Bagarre
+                    </h1>
+                </a>
+            </div>
+		</header>
+
+        <p th:if="${error}" class='error' onClick="this.style.display = 'none';">
+            <span th:text="${error}"></span>
+        </p>
+
+        <div class="add">
+            <div class="picture">
+                <div class="sub-title">
+                    <h2>Aaahh le brevage suprème</h2>
+                    <p>Rouge, blanc, ou rosé, on finira tous bleu</p>
+                </div>
+                <img th:src="@{/img/bar.jpg}">
+            </div>
+
+            <form class="form" th:action="@{/vin/ajouter}" th:object="${wine}" method="post" enctype="multipart/form-data">
+                <div class="block-input">
+                    <div class="small">
+                        <h3>Nom</h3>
+                        <input th:field="*{name}">
+                    </div>
+                    <div class="small">
+                        <h3>Catégorie</h3>
+                        <select th:field="*{category}">
+							<option value="-1" selected>La catégorie ?</option>
+							<option value="Rouge">Rouge </option>
+							<option value="Blanc">Blanc </option>
+                            <option value="Rose">Rosé </option>
+						</select>                    
+                    </div>
+                </div>
+                <div class="block-input">
+                    <div class="small">
+                        <h3>Créateur</h3>
+                        <input th:field="*{owner}">
+                    </div>
+                    <div class="small">
+                        <h3>Note (/5)</h3>
+                        <select th:field="*{grade}">
+							<option value="-1" selected>La note ?</option>
+                            <option value="1">0 </option>
+							<option value="1">1 </option>
+							<option value="2">2 </option>
+                            <option value="3">3 </option>
+                            <option value="4">4 </option>
+                            <option value="5">5 </option>
+						</select> 
+                    </div>
+                </div>
+                <div class="block-input">
+                    <div class="small">
+                        <h3>Puissance (/5)</h3>
+                        <select th:field="*{puissance}">
+							<option value="-1" selected>Puissance ?</option>
+                            <option value="1">0 </option>
+							<option value="1">1 </option>
+							<option value="2">2 </option>
+                            <option value="3">3 </option>
+                            <option value="4">4 </option>
+                            <option value="5">5 </option>
+						</select> 
+                    </div>
+                    <div class="small">
+                        <h3>Tanicité (/5)</h3>
+                        <select th:field="*{tanicite}">
+							<option value="-1" selected>Tanicité ?</option>
+                            <option value="1">0 </option>
+							<option value="1">1 </option>
+							<option value="2">2 </option>
+                            <option value="3">3 </option>
+                            <option value="4">4 </option>
+                            <option value="5">5 </option>
+						</select> 
+                    </div>
+                </div>
+                <div class="block-input">
+                    <div class="small">
+                        <h3>Sucrosité (/5)</h3>
+                        <select th:field="*{sucrosite}">
+							<option value="-1" selected>Sucrosité ?</option>
+                            <option value="1">0 </option>
+							<option value="1">1 </option>
+							<option value="2">2 </option>
+                            <option value="3">3 </option>
+                            <option value="4">4 </option>
+                            <option value="5">5 </option>
+						</select> 
+                    </div>
+                    <div class="small">
+                        <h3>Fruité (/5)</h3>
+                        <select th:field="*{fruite}">
+							<option value="-1" selected>Fruité ?</option>
+                            <option value="1">0 </option>
+							<option value="1">1 </option>
+							<option value="2">2 </option>
+                            <option value="3">3 </option>
+                            <option value="4">4 </option>
+                            <option value="5">5 </option>
+						</select>
+                    </div>
+                </div>
+                <div class="block-input">
+                    <div class="large">
+                        <h3>Description</h3>
+                        <textarea th:field="*{description}"></textarea>
+                    </div>
+                </div>
+                <div class="block-input">
+                    <div class="large">
+                        <label for="file" class="file">+ Ajouter une image</label>
+                        <input id="file" class="input-file" type="file" name="image" accept="image/*">
+                    </div>
+                </div>
+                <button type="submit" class="block-button">
+                    Ajouter le brevage +
+                </button>
+            </form>
+        </div>
+
+
+
+        <div class="footer">
+
+        </div>
+
+        <datalist id="category">
+            <option value="Rouge"> </option>
+            <option value="Blanc"> </option>
+            <option value="Rosé"> </option>
+        </datalist>
+
+        <script type="text/javascript">
+			$(".recipe").fadeOut(0);
+		</script>
+	</body>
+</html>

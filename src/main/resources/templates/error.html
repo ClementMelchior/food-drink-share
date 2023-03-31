@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Jus de bagarre</title>
+        <link th:href="@{/css/computer/error.css}" rel="stylesheet"/>
+	</head>
+
+	<body>
+		<header>
+            <div class="menu">
+                <a th:href="@{/accueil}" class="title">
+                    <h1>
+                        Bon, on a une erreur chef, je pense que t'as merdé quelque part, recommence mieux stp !
+                    </h1>
+                </a>
+            </div>
+		</header>
+
+        <div class="picture">
+            <img th:src="@{/img/error.png}">
+        </div>
+	</body>
+</html>

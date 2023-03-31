@@ -2,46 +2,55 @@
 <html lang="fr" xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="UTF-8">
-		<title>LazyTravelWeb</title>
-		<link href="../static/css/index.css" rel="stylesheet"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Jus de bagarre</title>
+        <script th:src="@{/javascript/jquery-2.1.4.js}"></script>
+        <script th:src="@{/javascript/recipe.js}"></script>
+        <link th:href="@{/css/computer/index.css}" rel="stylesheet"/>
+        <link th:href="@{/css/tablet/index.css}" rel="stylesheet"/>
+        <link th:href="@{/css/mobile/index.css}" rel="stylesheet"/>
 	</head>
 
 	<body>
 		<header>
             <div class="menu">
-                <div class="nav">
-                    <button>
-                        Accueil
-                    </button>
-                    <button>
-                        Se connecter     
-                    </button>
-                </div>
-                <div class="title">
+                <a th:href="@{/}" class="title">
                     <h1>
                         La Bagarre
                     </h1>
-                </div>
+                </a>
             </div>
 		</header>
 
         <div class="picture">
-            <img src="../static/img/bar.jpg">
+            <div class="sub-title">
+                <h2>Jus de bagarre</h2>
+                <p>La creme de la bagarre, pour les bagarreurs</p>
+            </div>
+            <img th:src="@{/img/bar.jpg}">
         </div>
-
+        
         <div class="sub-menu">
-            <div class="icon-cocktail">
-                Bagarre
-            </div>
-            <div class="icon-wine">
-                Vins
-            </div>
-            <div class="icon-digestif">
-                Pouce-pouce
-            </div>
-            <div class="icon-pizza">
-                Graille
-            </div>
+            <a th:href="@{cocktails}">
+                <div class="icon-cocktail">
+                    Bagarre
+                </div>
+            </a>
+            <a th:href="@{vins}">
+                <div class="icon-wine">
+                    Vins
+                </div>
+            </a>
+            <a th:href="@{digestifs}">
+                <div class="icon-digestif">
+                    Pouce-pouce
+                </div>
+            </a>
+            <a th:href="@{grailles}">
+                <div class="icon-pizza">
+                    Graille
+                </div>
+            </a>
         </div>
 	</body>
 </html>

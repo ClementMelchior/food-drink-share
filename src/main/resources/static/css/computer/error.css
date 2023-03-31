@@ -1,0 +1,44 @@
+body {
+    background-color: #151515;
+    font-family: sans-serif;
+}
+
+.menu{
+    display: flex;
+    margin-top: 50px;
+    width: 100%;
+    background-color: #151515;
+    color: white;
+} 
+
+.title {
+    display: flex;
+    margin-left: 15%;
+    width: 70%;
+    height: auto;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.title h1 {
+    font-weight: normal;
+    font-size: 25px;
+    color: #EE9C7F
+}
+
+
+.picture {
+    position: relative;
+    margin-top: 30px;
+    margin-left: calc(50% - 150px);
+    height: 300px; 
+    width: 300px;
+}
+
+.picture img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

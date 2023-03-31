@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Jus de bagarre</title>
+        <script th:src="@{/javascript/jquery-2.1.4.js}"></script>
+        <script th:src="@{/javascript/recipe.js}"></script>
+        <link th:href="@{/css/computer/login.css}" rel="stylesheet"/>
+	</head>
+
+    <body>
+        <header>
+            <div class="menu">
+                <div class="title">
+                    <h1>
+                        La Bagarre
+                    </h1>
+                </div>
+            </div>
+		</header>
+
+        <div class="picture">
+            <div class="sub-title">
+                <h2>Aller, connecte toi !</h2>
+                <div class="error" th:if="${param.error}">
+                    Invalid username and password.
+                </div>
+                <div class="logout" th:if="${param.logout}">
+                    You have been logged out.
+                </div>
+                <form class="form" th:action="@{/login}" method="post">
+                    <div class="block">
+                        <h3>Nom d'utilisateur</h3>
+                        <input type="text" name="username"/> 
+                    </div>
+                    <div class="block">
+                        <h3>Mot de passe</h3>
+                        <input type="password" name="password"/>
+                    </div>
+                    <div>
+                        <button type="submit" value="Sign In">
+                            Se connecter
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <img th:src="@{/img/bar.jpg}">
+        </div>
+    </body>
+</html>

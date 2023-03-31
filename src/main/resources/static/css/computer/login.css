@@ -1,0 +1,135 @@
+body {
+    background-color: #151515;
+    font-family: sans-serif;
+    color: white;
+}
+
+.menu{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: #151515;
+    color: white;
+} 
+
+.title {
+    display: flex;
+    margin-left: calc(50% - 125px);
+    width: 150px;
+    height: auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.title h1 {
+    color: #EE9C7F
+}
+
+/* ----------- picture ------------ */
+
+.picture {
+    position: relative;
+    margin-top: 30px;
+    height: 600px; 
+    width: 100%;
+}
+
+.picture img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.picture .sub-title {
+    position: absolute;
+    height: auto;
+    width: 400px;
+    top: 100px;
+    left: calc(50% - 200px);
+    background-color: #151515;
+    color: white;
+}
+
+.picture .sub-title h2 {
+    height: 25px;
+    width: calc(100% - 50px);
+    margin: 20px;
+    font-size: 25px;
+    background-color: #151515;
+    color: white;
+}
+
+.form {
+    width: 360px;
+    margin-left: 20px;
+    margin-top: 40px;
+    color: white;
+}
+
+.form .block{
+    height: auto; 
+    width: 100%;
+}
+
+.error {
+    margin-left: 20px;
+    font-size: 22px;
+    color: white;
+}
+
+.logout {
+    margin-left: 20px;
+    font-size: 22px;
+    color: white;
+}
+
+h3{
+    color: #EE9C7F;
+    font-size: 20px;
+    font-weight: normal;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+input {
+    color: #EE9C7F;
+    font-size: 22px;
+    width: 100%;
+    height: 30px;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: calc(50% - 100px);
+    color: white;
+    border: none;
+    background-color: #EE9C7F;
+    border-radius: 20px;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+
+button:hover {
+    width: 240px;
+    height: 40px;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left: calc(50% - 120px);
+    margin-bottom: 30px;
+    color: white;
+    background-color: #EE9C7F;
+    border: none;
+    border-radius: 20px;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+
+
+
+

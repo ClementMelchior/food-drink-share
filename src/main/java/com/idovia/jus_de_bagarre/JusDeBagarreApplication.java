@@ -2,11 +2,10 @@ package com.idovia.jus_de_bagarre;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 
-@SpringBootApplication
+//@SpringBootApplication
+@SpringBootApplication(exclude={SecurityAutoConfiguration.class})
 public class JusDeBagarreApplication {
 
 	public static void main(String[] args) {

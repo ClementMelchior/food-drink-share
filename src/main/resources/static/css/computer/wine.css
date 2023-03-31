@@ -1,0 +1,575 @@
+@media (min-width: 1100px) {
+
+    body {
+        background-color: #151515;
+        font-family: sans-serif;
+    }
+
+    .menu{
+        display: flex;
+        width: 100%;
+        height: 150px;
+        background-color: #151515;
+        color: white;
+    } 
+
+    .title {
+        display: flex;
+        margin-left: calc(50% - 125px);
+        width: 150px;
+        height: auto;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 25px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .title h1 {
+        color: #EE9C7F
+    }
+
+    /* ----------- picture ------------ */
+
+    .picture {
+        position: relative;
+        margin-top: 30px;
+        height: 400px; 
+        width: 100%;
+    }
+
+    .picture img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .picture .sub-title {
+        position: absolute;
+        width: 400px;
+        height: 220px;
+        top: 100px;
+        right: 200px;
+        background-color: #EE9C7F;
+        color: #151515;
+    }
+
+    .picture .sub-title h2 {
+        height: 25px;
+        width: calc(100% - 50px);
+        margin: 25px;
+        font-size: 25px;
+        background-color: #EE9C7F;
+        color: #151515;
+    }
+
+    .picture .sub-title p {
+        height: auto;
+        width: calc(100% - 50px);
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-bottom: 25px;
+        font-size: 20px;
+        color: #151515;
+        background-color: #EE9C7F;
+    }
+
+    .picture .sub-title .add {
+        height: 22px;
+        text-decoration: none;
+        width: fit-content;
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-right: 10px;
+        padding-bottom: 5px;
+        margin: 25px;
+        font-size: 20px;
+        color: #EE9C7F;
+        cursor: pointer;
+        background-color: #151515;
+        border-radius: 20px;
+        transition: all 0.2s ease-in;
+    }
+
+    .picture .sub-title .add:hover {
+        height: 22px;
+        text-decoration: none;
+        width: fit-content;
+        padding-left: 20px;
+        padding-top: 5px;
+        padding-right: 20px;
+        padding-bottom: 5px;
+        margin: 25px;
+        font-size: 20px;
+        color: #EE9C7F;
+        cursor: pointer;
+        background-color: #151515;
+        border-radius: 20px;
+        transition: all 0.2s ease-in;
+    }
+
+    .picture .sub-title .add a {
+        text-decoration: none;
+        color: #EE9C7F;
+        font-size: 20px;
+        cursor: pointer;
+        width: fit-content;
+    }
+
+    /* --------- sub menu ----------- */
+
+    .sub-menu {
+        margin-top: 30px;
+        display: flex;
+        width: 70%;
+        height: 200px;
+        margin-left: 15%;
+    }
+
+    .sub-menu a {
+        display: flex;
+        margin: 15px;
+        width: 250px;
+        height: auto;
+        color: white;
+        text-decoration: none;
+    }
+
+    .sub-menu .icon {
+        height: 200px;
+        width: 200px;
+        margin: auto;
+        background-color: #151515;
+    }
+
+
+    .sub-menu .icon-cocktail{
+        height: 200px;
+        width: 150px;
+        margin: auto;
+        background-image: url('../../icon/cocktail.png');
+        background-size: 150px 150px;
+        text-align: center;
+        color: white;
+        font-size: 25px;
+        background-repeat: no-repeat;
+        line-height: 375px;
+    }
+
+    .sub-menu .icon-wine{
+        height: 200px;
+        width: 150px;
+        margin: auto;
+        background-image: url('../../icon/wine.png');
+        background-size: 150px 150px;
+        text-align: center;
+        color: white;
+        font-size: 25px;
+        background-repeat: no-repeat;
+        line-height: 375px;
+    }
+
+    .sub-menu .icon-digestif{
+        height: 200px;
+        width: 150px;
+        margin: auto;
+        background-image: url('../../icon/digestif.png');
+        background-size: 150px 150px;
+        text-align: center;
+        color: white;
+        font-size: 25px;
+        background-repeat: no-repeat;
+        line-height: 375px;
+    }
+
+    .sub-menu .icon-pizza{
+        height: 200px;
+        width: 150px;
+        margin: auto;
+        background-image: url('../../icon/pizza.png');
+        background-size: 150px 150px;
+        text-align: center;
+        color: white;
+        font-size: 25px;
+        background-repeat: no-repeat;
+        line-height: 375px;
+    }
+
+    /* ---------- sub menu clickable ---------- */
+
+    .sub-menu .icon-cocktail:hover{
+        height: 200px;
+        width: 150px;
+        margin: auto;
+        background-image: url('../../icon/cocktailCliquable.png');
+        background-size: 150px 150px;
+        text-align: center;
+        color: #EE9C7F;
+        font-size: 25px;
+        background-repeat: no-repeat;
+        line-height: 375px;
+        cursor: pointer;
+    }
+
+    .sub-menu .icon-wine:hover{
+        height: 200px;
+        width: 150px;
+        margin: auto;
+        background-image: url('../../icon/wineCliquable.png');
+        background-size: 150px 150px;
+        text-align: center;
+        color: #EE9C7F;
+        font-size: 25px;
+        background-repeat: no-repeat;
+        line-height: 375px;
+        cursor: pointer;
+    }
+
+    .sub-menu .icon-digestif:hover{
+        height: 200px;
+        width: 150px;
+        margin: auto;
+        background-image: url('../../icon/digestifCliquable.png');
+        background-size: 150px 150px;
+        text-align: center;
+        color: #EE9C7F;
+        font-size: 25px;
+        background-repeat: no-repeat;
+        line-height: 375px;
+        cursor: pointer;
+    }
+
+    .sub-menu .icon-pizza:hover{
+        height: 200px;
+        width: 150px;
+        margin: auto;
+        background-image: url('../../icon/pizzaCliquable.png');
+        background-size: 150px 150px;
+        text-align: center;
+        color: #EE9C7F;
+        font-size: 25px;
+        background-repeat: no-repeat;
+        line-height: 375px;
+        cursor: pointer;
+
+    }
+
+    /* ---------------- product ----------------- */
+
+    .category {
+        width: 70%;
+        height: auto;
+        margin-left: 15%;
+        margin-top: 100px;
+    }
+
+    .category h1 {
+        font-size: 30px;
+        color: white;
+        text-align: center;
+    }
+
+    .result {
+        width: 70%;
+        height: auto;
+        margin-left: 15%;
+        margin-top: 50px;
+    }
+
+    .result .product {
+        display: flex;
+        width: 100%;
+        height: 240px;
+        border-top: solid 1px white;
+
+    }
+
+    .result .product .product-picture{
+        width: 200px;
+        height: 200px;
+        margin-top: 20px;    
+        margin-bottom: 20px;       
+    }
+
+    .result .product .product-picture img{
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+
+    }
+
+    .result .product .product-information{
+        width: 100%;
+        height: 180px;
+        margin: 10px;    
+    }
+
+    .result .product .product-information h2{
+        width: auto;
+        height: 30px;
+        font-size: 25px;
+        color: white;
+        margin-left: 20px;
+    }
+
+    .result .product .product-information p{
+        width: auto;
+        height: 80px;
+        font-size: 18px;
+        margin-left: 20px;
+        color: white;
+    }
+
+    .result .product .product-information button{
+        width: 50px;
+        height: 30px;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-left: calc(100% - 0px);
+        color: white;
+        border: none;
+        background-color: #EE9C7F;
+        border-radius: 20px;
+        transition: all 0.2s ease-in;
+        cursor: pointer;
+        
+    }
+
+    .result .product .product-information button:hover{
+        width: 70px;
+        height: 30px;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-left: calc(100% - 20px);
+        color: white;
+        background-color: #EE9C7F;
+        border: none;
+        border-radius: 20px;
+        transition: all 0.2s ease-in;
+        cursor: pointer;
+    }
+
+    .result .product .product-grade {
+        width: 30px;
+        height: 180px;
+        font-size: 18px;
+        margin: 10px;
+        color: white;
+    }
+
+
+    /* --------------- ingredients --------------- */
+
+    .recipe {
+        width: 100%;
+        height: auto;
+    }
+
+    .recipe .caracteristique {
+        margin-bottom: 50px;
+        display: flex;
+    }
+
+    .recipe .caracteristique .caracteristique-zone {
+        width: 50%;
+        margin-right: 10px;
+    }
+
+    .recipe .caracteristique .caracteristique-zone .line {
+        width: 100%;
+        display: flex;
+    }
+
+    .recipe .caracteristique .caracteristique-zone .line h3 {
+        color: white;
+        font-size: 20px;
+        font-weight: normal;
+        width: 150px;
+    }
+
+    .recipe .caracteristique .caracteristique-zone .line img {
+        width: auto;
+        height: 30px;
+        padding-top: 15px;
+    }
+
+    .recipe .instructions-button {
+        width: 50px;
+        height: 30px;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: calc(100% - 50px);
+        color: white;
+        border: none;
+        background-color: #EE9C7F;
+        border-radius: 20px;
+        transition: all 0.2s ease-in;
+        cursor: pointer;
+    }
+
+    .recipe .instructions-button:hover{
+        width: 70px;
+        height: 30px;
+        font-size: 20px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        margin-left: calc(100% - 70px);
+        color: white;
+        background-color: #EE9C7F;
+        border: none;
+        border-radius: 20px;
+        transition: all 0.2s ease-in;
+        cursor: pointer;
+    }
+
+
+
+    /* --------------- comment --------------- */
+
+    .recipe h2 {
+        color: white;
+        font-size: 25px;
+    }
+
+    .comment-zone {
+        width: 100%;
+        height: fit-content;
+        max-height: 400px;
+        overflow-y: auto;
+        margin-top: 20px;
+        border-bottom: 0.5px solid grey;
+        border-top: 0.5px solid grey;
+    }
+
+    .comment-zone .sub-comment-zone {
+        position: relative;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+        display: block;
+    }
+
+    .comment-zone .sub-comment-zone::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .comment-zone .sub-comment-zone .comment {
+        float: left;
+        max-width: 70%;
+        width: fit-content;
+        border-radius: 20px;
+        background-color: white;
+        color: #151515;
+    }
+
+    .comment-zone .sub-comment-zone .my-comment {
+        float: right;
+        max-width: 70%;
+        width: fit-content;
+        border-radius: 20px;
+        background-color: #EE9C7F;
+    }
+
+    .comment-zone .sub-comment-zone .comment h3 {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 24px;
+        color: #151515;
+        text-align: left;
+    }
+
+    .comment-zone .sub-comment-zone .comment p {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 20px;
+        line-height: 26px;
+        color: #151515;
+        text-align: left;
+    }
+
+    .comment-zone .sub-comment-zone .my-comment h3 {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 24px;
+        color: #151515;
+        text-align: right;
+    }
+
+    .comment-zone .sub-comment-zone .my-comment p {
+        margin-left: 20px;
+        margin-right: 20px;
+        line-height: 26px;
+        font-size: 20px;
+        color: #151515;
+        text-align: right;
+    }
+
+    .comment-text {
+        height: fit-content;
+        max-height: 400px;
+        margin-top: 20px;
+    }
+
+    .comment-text textarea {
+        background-color: white;
+        color: #151515;
+        width: calc(100% - 42px);
+        height: 50px;
+        border-radius: 20px;
+        font-size: 20px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .recipe .send-button {
+        width: 150px;
+        height: 30px;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: calc(50% - 75px);
+        color: white;
+        border: none;
+        background-color: #EE9C7F;
+        border-radius: 20px;
+        transition: all 0.2s ease-in;
+        cursor: pointer;
+    }
+
+
+    .recipe .send-button:hover{
+        width: 200px;
+        height: 30px;
+        font-size: 20px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        margin-left: calc(50% - 100px);
+        color: white;
+        background-color: #EE9C7F;
+        border: none;
+        border-radius: 20px;
+        transition: all 0.2s ease-in;
+        cursor: pointer;
+    }
+
+    .footer {
+        height: 200px;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+

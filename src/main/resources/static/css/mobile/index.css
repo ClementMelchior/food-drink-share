@@ -1,0 +1,288 @@
+@media (max-width: 600px) {
+    body {
+        background-color: #151515;
+        font-family: sans-serif;
+        color: white;
+    }
+
+    .menu{
+        display: flex;
+        width: 100%;
+        height: 150px;
+        background-color: #151515;
+        color: white;
+    } 
+
+    .nav {
+        display: flex;
+        margin: 15px;
+        width: 500px;
+        height: auto;
+        color: white;
+    }
+
+    .nav a {
+        display: flex;
+        margin: 10px;
+        width: auto;
+        height: 15px;
+        text-transform: uppercase;
+        font-size: 15px;
+        text-align: center;
+        cursor: pointer;
+        color: white;
+        border: none;
+        background-color: #151515;
+        text-decoration: none;
+    }
+
+    .nav a:hover {
+        display: flex;
+        margin: 10px;
+        width: auto;
+        height: 15px;
+        text-transform: uppercase;
+        font-size: 15px;
+        text-align: center;
+        cursor: pointer;
+        color: #EE9C7F;
+        border: none;
+        background-color: #151515;
+        text-decoration: none;
+    }
+
+    .title {
+        display: flex;
+        margin-left: calc(50% - 125px);
+        width: 150px;
+        height: auto;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 25px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .title h1 {
+        color: #EE9C7F
+    }
+
+    /* ----------- picture ------------ */
+
+    .picture {
+        position: relative;
+        margin-top: 30px;
+        height: 400px; 
+        width: 100%;
+    }
+
+    .picture img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .picture .sub-title {
+        position: absolute;
+        height: auto;
+        width: 100%;
+        top: 100px;
+        left: 0px;
+        background-color: #EE9C7F;
+        color: #151515;
+    }
+
+    .picture .sub-title h2 {
+        height: 20px;
+        width: calc(100% - 30px);
+        margin: 15px;
+        font-size: 20px;
+        background-color: #EE9C7F;
+        color: #151515;
+    }
+
+    .picture .sub-title p {
+        height: auto;
+        width: calc(100% - 30px);
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        color: #151515;
+        background-color: #EE9C7F;
+    }
+
+    .picture .sub-title a {
+        height: 30px;
+        text-decoration: none;
+        width: calc(100% - 50px);
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-right: 10px;
+        padding-bottom: 5px;
+        margin: 25px;
+        font-size: 16px;
+        color: #EE9C7F;
+        cursor: pointer;
+        background-color: #151515;
+        border-radius: 20px;
+        transition: all 0.2s ease-in;
+    }
+
+    .picture .sub-title a:hover {
+        height: 30px;
+        text-decoration: none;
+        width: calc(100% - 50px);
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        margin: 25px;
+        margin-bottom: 25px;
+        font-size: 20px;
+        color: #EE9C7F;
+        cursor: pointer;
+        background-color: #151515;
+        border-radius: 20px;
+        transition: all 0.2s ease-in;
+    }
+
+
+    /* --------- sub menu ----------- */
+
+    .sub-menu {
+        margin-top: 30px;
+        display: flex;
+        height: 150px;
+        overflow-x: auto;
+        overflow-y: none;
+    }
+
+    .sub-menu a {
+        display: flex;
+        margin: 15px;
+        width: 100%;
+        height: 90px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .sub-menu .icon {
+        height: 90px;
+        width: 90px;
+        margin: auto;
+        background-color: #151515;
+    }
+
+    .sub-menu .icon-cocktail{
+        height: 80px;
+        width: 80px;
+        margin: 0px;
+        background-image: url('../../icon/cocktail.png');
+        background-size: 80px 80px;
+        text-align: center;
+        color: #151515;
+        font-size: 0px;
+        background-repeat: no-repeat;
+    }
+
+    .sub-menu .icon-wine{
+        height: 80px;
+        width: 80px;
+        margin: 0px;
+        background-image: url('../../icon/wine.png');
+        background-size: 80px 80px;
+        text-align: center;
+        color: #151515;
+        font-size: 0px;
+        background-repeat: no-repeat;
+    }
+
+    .sub-menu .icon-digestif{
+        height: 80px;
+        width: 80px;
+        margin: 0px;
+        background-image: url('../../icon/digestif.png');
+        background-size: 80px 80px;
+        text-align: center;
+        color: #151515;
+        font-size: 0px;
+        background-repeat: no-repeat;
+    }
+
+    .sub-menu .icon-pizza{
+        height: 80px;
+        width: 80px;
+        margin: 0px;
+        background-image: url('../../icon/pizza.png');
+        background-size: 80px 80px;
+        text-align: center;
+        color: #151515;
+        font-size: 0px;
+        background-repeat: no-repeat;
+    }
+
+    /* ---------- sub menu clickable ---------- */
+
+    .sub-menu .icon-cocktail:hover{
+        height: 80px;
+        width: 80px;
+        margin: 0px;
+        background-image: url('../../icon/cocktailCliquable.png');
+        background-size: 80px 80px;
+        text-align: center;
+        font-size: 0px;
+        color: #151515;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .sub-menu .icon-wine:hover{
+        height: 80px;
+        width: 80px;
+        margin: 0px;
+        background-image: url('../../icon/wineCliquable.png');
+        background-size: 80px 80px;
+        text-align: center;
+        color: #151515;
+        font-size: 0px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .sub-menu .icon-digestif:hover{
+        height: 80px;
+        width: 80px;
+        margin: 0px;
+        background-image: url('../../icon/digestifCliquable.png');
+        background-size: 80px 80px;
+        text-align: center;
+        color: #151515;
+        font-size: 0px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .sub-menu .icon-pizza:hover{
+        height: 80px;
+        width: 80px;
+        margin: 0px;
+        background-image: url('../../icon/pizzaCliquable.png');
+        background-size: 80px 80px;
+        text-align: center;
+        color: #151515;
+        font-size: 0px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+
+    }
+
+    .footer {
+        height: 200px;
+        width: 100%;
+
+    }
+}
+
+
+
